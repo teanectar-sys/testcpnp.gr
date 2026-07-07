@@ -2837,15 +2837,21 @@ input, select, textarea {
 	}
 
 		#header .logo {
-			display: block;
-			border-bottom: 0;
-			color: inherit;
-			font-weight: 900;
-			letter-spacing: 0.35em;
-			margin: 0 0 2.5em 0;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	border-bottom: 0;
+	color: inherit;
+	font-weight: 900;
+	letter-spacing: 0.35em;
+	margin: 0;
+	text-decoration: none;
+	text-transform: none;
+}
+#header .logo img {
+	height: 90px;
+	width: auto;
+	display: block;
+}
 		}
 
 			#header .logo > * {
