@@ -3571,9 +3571,8 @@ border-bottom:none;
 #footer > .inner .copyright a:hover{
     color:#4da3ff !important;
 }
-/* Logo */
 .logo img {
-    height: 55px;
+    height: 110px;
     width: auto;
     display: block;
 }
