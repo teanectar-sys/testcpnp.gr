@@ -3554,3 +3554,13 @@ padding:.35em 0;
 border-bottom:none;
 
 }
+/* Footer links */
+
+#footer .copyright a{
+    color:#ffffff !important;
+    opacity:.85;
+}
+
+#footer .copyright a:hover{
+    color:#4da3ff !important;
+}
