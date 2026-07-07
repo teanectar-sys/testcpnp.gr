@@ -3564,3 +3564,10 @@ border-bottom:none;
 #footer .copyright a:hover{
     color:#4da3ff !important;
 }
+#footer > .inner .copyright a{
+    color:#ffffff !important;
+}
+
+#footer > .inner .copyright a:hover{
+    color:#4da3ff !important;
+}
