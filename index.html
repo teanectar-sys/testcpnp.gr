@@ -249,7 +249,103 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3/dist/cookieconsent.css">
 
+<script type="module">
+
+import * as CookieConsent from 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3/dist/cookieconsent.esm.js';
+
+CookieConsent.run({
+
+    guiOptions: {
+        consentModal: {
+            layout: "box",
+            position: "bottom right",
+            equalWeightButtons: true
+        }
+    },
+
+    categories: {
+
+        necessary: {
+            enabled: true,
+            readOnly: true
+        },
+
+        analytics: {}
+
+    },
+
+    language: {
+
+        default: "el",
+
+        translations: {
+
+            el: {
+
+                consentModal: {
+
+                    title: "🍪 Cookies",
+
+                    description:
+                        "Η ιστοσελίδα χρησιμοποιεί απαραίτητα cookies για τη σωστή λειτουργία της. Μπορείτε επίσης να επιλέξετε αν επιθυμείτε cookies στατιστικών.",
+
+                    acceptAllBtn: "Αποδοχή όλων",
+
+                    acceptNecessaryBtn: "Μόνο απαραίτητα",
+
+                    showPreferencesBtn: "Ρυθμίσεις"
+
+                },
+
+                preferencesModal: {
+
+                    title: "Ρυθμίσεις Cookies",
+
+                    acceptAllBtn: "Αποδοχή όλων",
+
+                    acceptNecessaryBtn: "Μόνο απαραίτητα",
+
+                    savePreferencesBtn: "Αποθήκευση",
+
+                    closeIconLabel: "Κλείσιμο",
+
+                    sections: [
+
+                        {
+
+                            title: "Απαραίτητα Cookies",
+
+                            description:
+                                "Τα cookies αυτά είναι απαραίτητα για τη σωστή λειτουργία της ιστοσελίδας."
+
+                        },
+
+                        {
+
+                            title: "Cookies Στατιστικών",
+
+                            description:
+                                "Μας βοηθούν να κατανοήσουμε πώς χρησιμοποιείται η ιστοσελίδα.",
+
+                            linkedCategory: "analytics"
+
+                        }
+
+                    ]
+
+                }
+
+            }
+
+        }
+
+    }
+
+});
+
+</script>
 	</body>
 </html>
 <!-- redeploy -->
