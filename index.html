@@ -282,7 +282,54 @@ import * as CookieConsent from 'https://cdn.jsdelivr.net/gh/orestbida/cookiecons
 
 CookieConsent.run({
 
+    onFirstConsent: ({cookie}) => {
+
+        if (cookie.categories.includes('analytics')) {
+
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted'
+            });
+
+        }
+
+    },
+
+    onChange: ({cookie}) => {
+
+        if (cookie.categories.includes('analytics')) {
+
+            gtag('consent', 'update', {
+                analytics_storage: 'granted',
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted'
+            });
+
+        } else {
+
+            gtag('consent', 'update', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied'
+            });
+
+        }
+
+    },
+
     guiOptions: {
+
+        consentModal: {
+            layout: "box",
+            position: "bottom right",
+            equalWeightButtons: true
+        }
+
+    },
         consentModal: {
             layout: "box",
             position: "bottom right",
